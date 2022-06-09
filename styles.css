@@ -1,3 +1,11 @@
+/* Font */
+@font-face {
+    font-family: norse-bold;
+    src: url(./fonts/Norse-Bold.otf);
+}
+
+/* Body */
+
 body {
     display: flex;
     flex-direction: row;
@@ -5,6 +13,7 @@ body {
     align-items: center;
     margin: 0 auto;
 }
+
 
 /* Title */
 
@@ -25,19 +34,53 @@ body {
     height: 120px;
     color: white;
     /* padding-top: 16px; */
+    font-family: norse-bold;
+    font-size: 80px;
 }
 
 #logo-img {
     height: 100px;
 }
 
+
 /* Content */
+
 #content-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: white;
+    background-color: #f9fafb;
     height: 100vh;
     width: 70vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --individual-padding: 32px;
 }
 
+#content-div > p {
+    padding-left: var(--individual-padding);
+    font-size: 20px;
+}
+
+#form-card {
+    background-color: white;
+    margin-bottom: 30px;
+    box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.171);
+    padding-left: var(--individual-padding);
+}
+
+form > button {
+    margin-left: var(--individual-padding);
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #596D48;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 56px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.171);
+}
+
+span {
+    padding-left: var(--individual-padding);
+}
