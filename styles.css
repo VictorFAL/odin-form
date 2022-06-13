@@ -1,8 +1,28 @@
-/* Font */
+/* Fonts */
+
 @font-face {
     font-family: norse-bold;
     src: url(./fonts/Norse-Bold.otf);
 }
+
+@font-face {
+    font-family: roboto;
+    src: url(./fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: roboto-medium;
+    src: url(./fonts/Roboto-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: roboto-medium-italic;
+    src: url(./fonts/Roboto-MediumItalic.ttf);
+    font-weight: 500;
+    font-style: italic;
+}
+
 
 /* Body */
 
@@ -12,34 +32,57 @@ body {
     justify-self: center;
     align-items: center;
     margin: 0 auto;
+    --title-width: 30vw;
 }
 
 
 /* Title */
 
 #title-img {
-    width: 30vw;
+    width: var(--title-width);
     height: 100vh;
-    position: absolute;
-    z-index: -1;
+    z-index: -2;
 }
 
 #logo-div {
+    position: absolute;
+    top: 20vh;
+    z-index: -1;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
-    width: 30vw;
+    width: var(--title-width);
     height: 120px;
     color: white;
-    /* padding-top: 16px; */
     font-family: norse-bold;
     font-size: 80px;
 }
 
 #logo-img {
     height: 100px;
+}
+
+#credit {
+    position: absolute;
+    bottom: 10px;
+    /* z-index: -1; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: var(--title-width);
+    color: white;
+    font-family: roboto;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#credit > span > a {
+    color: white;
+    text-decoration: underline;
 }
 
 
@@ -52,13 +95,19 @@ body {
     background-color: #f9fafb;
     height: 100vh;
     width: 70vw;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: roboto;
     --individual-padding: 32px;
 }
 
 #content-div > p {
     padding-left: var(--individual-padding);
+    font-family: roboto-medium;
     font-size: 20px;
+    font-weight: 500;
+}
+
+em {
+    font-family: roboto-medium-italic;
 }
 
 #form-card {
@@ -66,21 +115,82 @@ body {
     margin-bottom: 30px;
     box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.171);
     padding-left: var(--individual-padding);
+    padding-top: 1px;
+    padding-bottom: 24px;
+    font-family: roboto;
+    color: #1f2937;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 8px 50px 8px 0px;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family: roboto-medium;
+    letter-spacing: 1px;
+}
+
+input {
+    width: 200px;
+    height: 24px;
+    border: none;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    background-color: #fffefe;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+    border: 1px solid #1d4ed8;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.171);
+}
+
+input:user-invalid {
+    border: none;
+    outline: none;
+    border: 1px solid #b91c1c;
+}
+
+input[type = "password"]:invalid {
+    border: none;
+    outline: none;
+    border: 1px solid #b91c1c;
 }
 
 form > button {
     margin-left: var(--individual-padding);
     margin-bottom: 24px;
     font-size: 16px;
-    font-weight: 700;
     background-color: #596D48;
     color: white;
     border: none;
     border-radius: 8px;
     padding: 16px 56px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.171);
+    font-family: roboto-medium;
+}
+
+form > button:hover {
+    cursor: pointer;
 }
 
 span {
     padding-left: var(--individual-padding);
+}
+
+a {
+    color: #596D48;
+    text-decoration: none;
 }
