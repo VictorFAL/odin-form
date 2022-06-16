@@ -43,12 +43,12 @@
                     <div class="form-row">
                         <div class="form-element">
                             <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" required>
+                            <input type="text" id="first-name" pattern="[A-Za-z]{1,32}" required>
                         </div>
 
                         <div class="form-element">
                             <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" required>
+                            <input type="text" id="last-name" pattern="[A-Za-z]{1,32}" required>
                         </div>
                     </div>
 
@@ -67,7 +67,7 @@
                     <div class="form-row">
                         <div class="form-element">
                             <label for="pw">Password</label>
-                            <input type="password" id="pw" required>
+                            <input type="password" id="pw" minlength="6" maxlength="14" required>
                         </div>
 
                         <div class="form-element">
