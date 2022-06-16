@@ -163,12 +163,6 @@ input:user-invalid {
     border: 1px solid #b91c1c;
 }
 
-input[type = "password"]:invalid {
-    border: none;
-    outline: none;
-    border: 1px solid #b91c1c;
-}
-
 form > button {
     margin-left: var(--individual-padding);
     margin-bottom: 24px;

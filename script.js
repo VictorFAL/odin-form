@@ -1,7 +1,10 @@
-btnSubmit = document.querySelector('button');
-inputPass = document.getElementById('pw');
-inputConfPass = document.getElementById('cpw')
+const password = document.getElementById('pw');
+const confirm = document.getElementById('cpw');
 
-btnSubmit.addEventListener(() => {
-    
-});
+confirm.onkeyup = () => {
+    if(password.value != confirm.value) {
+        confirm.setCustomValidity("Passwords don't match")
+    } else {
+        confirm.setCustomValidity('');
+    }
+};
